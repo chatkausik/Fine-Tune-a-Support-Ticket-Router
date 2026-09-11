@@ -1,0 +1,234 @@
+{
+  "provenance": {
+    "review_date": "2026-09-11",
+    "run_id": "train_2026-09-11-17-48-28",
+    "status": "Historical aggregate reconstruction; no new model execution",
+    "matrix_source": "Counts transcribed from docs/images/confusion_matrix.png and notebook cell index 28",
+    "baseline_source": "Historical report in notebook cell index 18, remapped from project display order to alphabetical true class order; rounded to 3 decimals",
+    "fine_tuned_source": "Recomputed from transcribed matrix; cross-checked with historical report in cell index 25",
+    "limitations": [
+      "Original per-ticket predictions are absent",
+      "Original training YAML and adapter are absent",
+      "Internal validation setting is unresolved",
+      "Baseline and fine-tuned decision rules differ"
+    ],
+    "notebook_sha256_before_documentation_update": "f863c0b36036b7a5be31f00317ce9166165a3082b3524c3ce072a53ea9c222d3",
+    "notebook_sha256_after_architecture_cell": "c349345e44932485277d7d663f8951a02cfcda744e8e36e06fc4bd5b63f6ef09",
+    "cell_index_note": "Source indices refer to the notebook before insertion of the architecture Markdown cell; subsequent indices shift by one."
+  },
+  "dataset_audit": {
+    "sha256": "e2badb2350901e22df542a43160b5e994638df3db8cee0021d8e62ac5b63884b",
+    "rows": 5000,
+    "columns": [
+      "category_truth",
+      "text"
+    ],
+    "label_counts": {
+      "Active Directory": 715,
+      "Computer-Services": 714,
+      "EOL": 714,
+      "Fileservice": 714,
+      "O365": 714,
+      "Software": 714,
+      "Support general": 715
+    },
+    "empty_text_count": 0,
+    "exact_unique_texts": 5000,
+    "normalized_unique_texts": 5000,
+    "normalization": "lowercase, collapse whitespace, strip",
+    "text_characters": {
+      "min": 72,
+      "mean": 175.7894,
+      "max": 492
+    },
+    "semantic_overlap_audited": false
+  },
+  "label_order": [
+    "Support general",
+    "Fileservice",
+    "O365",
+    "EOL",
+    "Software",
+    "Active Directory",
+    "Computer-Services"
+  ],
+  "fine_tuned": {
+    "confusion_matrix": [
+      [
+        137,
+        0,
+        0,
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        2,
+        140,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        141,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        141,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        142,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1,
+        0,
+        0,
+        139,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        141
+      ]
+    ],
+    "accuracy": 0.981,
+    "correct": 981,
+    "errors": 19,
+    "macro_f1": 0.981058891591964,
+    "per_class": {
+      "Support general": {
+        "precision": 0.958041958041958,
+        "recall": 0.958041958041958,
+        "f1": 0.958041958041958,
+        "support": 143,
+        "correct": 137,
+        "predicted_count": 143
+      },
+      "Fileservice": {
+        "precision": 0.9859154929577465,
+        "recall": 0.9790209790209791,
+        "f1": 0.9824561403508772,
+        "support": 143,
+        "correct": 140,
+        "predicted_count": 142
+      },
+      "O365": {
+        "precision": 0.986013986013986,
+        "recall": 0.986013986013986,
+        "f1": 0.986013986013986,
+        "support": 143,
+        "correct": 141,
+        "predicted_count": 143
+      },
+      "EOL": {
+        "precision": 1.0,
+        "recall": 0.9929577464788732,
+        "f1": 0.9964664310954063,
+        "support": 142,
+        "correct": 141,
+        "predicted_count": 141
+      },
+      "Software": {
+        "precision": 0.9530201342281879,
+        "recall": 0.993006993006993,
+        "f1": 0.9726027397260273,
+        "support": 143,
+        "correct": 142,
+        "predicted_count": 149
+      },
+      "Active Directory": {
+        "precision": 0.9858156028368794,
+        "recall": 0.972027972027972,
+        "f1": 0.9788732394366197,
+        "support": 143,
+        "correct": 139,
+        "predicted_count": 141
+      },
+      "Computer-Services": {
+        "precision": 1.0,
+        "recall": 0.986013986013986,
+        "f1": 0.9929577464788732,
+        "support": 143,
+        "correct": 141,
+        "predicted_count": 141
+      }
+    }
+  },
+  "baseline": {
+    "accuracy": 0.209,
+    "correct": 209,
+    "errors": 791,
+    "macro_f1_reported": 0.151,
+    "per_class_reported": {
+      "Active Directory": {
+        "precision": 1,
+        "recall": 0.007,
+        "f1": 0.014,
+        "support": 143
+      },
+      "Computer-Services": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 143
+      },
+      "EOL": {
+        "precision": 0.929,
+        "recall": 0.275,
+        "f1": 0.424,
+        "support": 142
+      },
+      "Fileservice": {
+        "precision": 1,
+        "recall": 0.098,
+        "f1": 0.178,
+        "support": 143
+      },
+      "O365": {
+        "precision": 0.333,
+        "recall": 0.007,
+        "f1": 0.014,
+        "support": 143
+      },
+      "Software": {
+        "precision": 0.867,
+        "recall": 0.091,
+        "f1": 0.165,
+        "support": 143
+      },
+      "Support general": {
+        "precision": 0.152,
+        "recall": 0.986,
+        "f1": 0.264,
+        "support": 143
+      }
+    }
+  }
+}
